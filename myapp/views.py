@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
+from .models import *
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-# Create your views here.
+def home(request):
+    context ={
+    }
+    return render(request, 'pages/home.html', context)
