@@ -92,6 +92,135 @@ background: linear-gradient(24deg, #262a5e, #fa9046);
 }#commitment-section h1{
 color: white!important;
 }
+.accordion-button:not(.collapsed) {
+  color: #000 !important;
+  background-color: #fa9046 !important;
+}
+
+button.accordion-button {
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+
+@media (max-width: 768px) {
+  button.accordion-button {
+    font-size: 16px !important;
+  }
+}
+
+img.img-fluid.services-icon {
+  width: 25%;
+  margin-bottom: 15px;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+  height: 100%;
+}
+
+.service-card i {
+  font-size: 2rem;
+  color: #f47c30;
+  margin-bottom: 15px;
+}
+
+.service-card h5 {
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #333;
+  padding-left: 0;
+  margin-bottom: 8px;
+}
+
+.service-card .btn {
+  font-weight: 600;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+
+th {
+  background-color: #fa9046 !important;
+  color: white !important;
+}
+
+th {
+  background-color: #fa9046 !important;
+  color: white !important;
+  white-space: nowrap;
+}
+
+table.table-clean td,
+table.table-clean th {
+  padding: 1rem;
+  /* More spacing */
+  vertical-align: middle;
+}
+
+table.table-clean {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.table-clean td {
+  background-color: #fff;
+}
+
+.table-clean td,
+.table-clean th {
+  border: 1px solid #dee2e6;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.sticky-section {
+  position: relative;
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* <-- Makes background fixed only inside this section */
+  z-index: 1;
+  padding: 5rem 0;
+}
+
+.sticky-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dark overlay */
+  z-index: 0;
+}
+
+.sticky-section .content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  /* Adjust based on your nav height */
+}
+
+@media(max-width:768px) {
+  .header .logo h1 {
+    font-size: 20px;
+  }
+}
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -823,7 +952,7 @@ section,
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 60px 0;
-  scroll-margin-top: 900px;
+  /* scroll-margin-top: 900px; */
   overflow: clip;
 }
 
@@ -831,7 +960,7 @@ section,
 
   section,
   .section {
-    scroll-margin-top: 66px;
+    /* scroll-margin-top: 66px; */
   }
 }
 
