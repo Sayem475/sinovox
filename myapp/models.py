@@ -10,35 +10,35 @@ class UniqueWebTitlesManager(models.Manager):
         return webtitles
 
 class WebsiteTitles(models.Model):
-    en_about_title = models.CharField(max_length=1000)
-    en_about_short_description = models.TextField(max_length=1000)
-    en_summary_service_title = models.CharField(max_length=1000)
-    en_summary_service_short_discription = models.TextField(max_length=1000)
-    en_approach_title = models.CharField(max_length=1000)
-    en_approach_short_discription = models.TextField(max_length=1000)
-    en_all_service_title = models.CharField(max_length=1000)
-    en_all_service_discription = models.TextField(max_length=1000)
-    en_packages_title = models.CharField(max_length=1000)
-    en_packages_short_description = models.TextField(max_length=1000)
-    en_whychooseus_title = models.CharField(max_length=1000)
-    en_whychooseus_short_description = models.TextField(max_length=1000)
-    en_contact_title = models.CharField(max_length=1000)
-    en_contact_short_description = models.TextField(max_length=1000)
+    en_about_title = models.CharField(max_length=1000,blank=True, null=True)
+    en_about_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    en_summary_service_title = models.CharField(max_length=1000,blank=True, null=True)
+    en_summary_service_short_discription = models.TextField(max_length=1000,blank=True, null=True)
+    en_approach_title = models.CharField(max_length=1000,blank=True, null=True)
+    en_approach_short_discription = models.TextField(max_length=1000,blank=True, null=True)
+    en_all_service_title = models.CharField(max_length=1000,blank=True, null=True)
+    en_all_service_discription = models.TextField(max_length=1000,blank=True, null=True)
+    en_packages_title = models.CharField(max_length=1000,blank=True, null=True)
+    en_packages_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    en_whychooseus_title = models.CharField(max_length=1000,blank=True, null=True)
+    en_whychooseus_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    en_contact_title = models.CharField(max_length=1000,blank=True, null=True)
+    en_contact_short_description = models.TextField(max_length=1000,blank=True, null=True)
 
-    ch_about_title = models.CharField(max_length=1000)
-    ch_about_short_description = models.TextField(max_length=1000)
-    ch_summary_service_title = models.CharField(max_length=1000)
-    ch_summary_service_short_discription = models.TextField(max_length=1000)
-    ch_approach_title = models.CharField(max_length=1000)
-    ch_approach_short_discription = models.TextField(max_length=1000)
-    ch_all_service_title = models.CharField(max_length=1000)
-    ch_all_service_discription = models.TextField(max_length=1000)
-    ch_packages_title = models.CharField(max_length=1000)
-    ch_packages_short_description = models.TextField(max_length=1000)
-    ch_whychooseus_title = models.CharField(max_length=1000)
-    ch_whychooseus_short_description = models.TextField(max_length=1000)
-    ch_contact_title = models.CharField(max_length=1000)
-    ch_contact_short_description = models.TextField(max_length=1000)
+    ch_about_title = models.CharField(max_length=1000,blank=True, null=True)
+    ch_about_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    ch_summary_service_title = models.CharField(max_length=1000,blank=True, null=True)
+    ch_summary_service_short_discription = models.TextField(max_length=1000,blank=True, null=True)
+    ch_approach_title = models.CharField(max_length=1000,blank=True, null=True)
+    ch_approach_short_discription = models.TextField(max_length=1000,blank=True, null=True)
+    ch_all_service_title = models.CharField(max_length=1000,blank=True, null=True)
+    ch_all_service_discription = models.TextField(max_length=1000,blank=True, null=True)
+    ch_packages_title = models.CharField(max_length=1000,blank=True, null=True)
+    ch_packages_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    ch_whychooseus_title = models.CharField(max_length=1000,blank=True, null=True)
+    ch_whychooseus_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    ch_contact_title = models.CharField(max_length=1000,blank=True, null=True)
+    ch_contact_short_description = models.TextField(max_length=1000,blank=True, null=True)
 
     objects = UniqueWebTitlesManager()
     def save(self, *args, **kwargs):
@@ -64,9 +64,9 @@ class HeroSection(models.Model):
     en_short_description = models.TextField(max_length=500)
     en_banner_image = models.ImageField(upload_to='banner/')
 
-    ch_title = models.CharField(max_length=255)
-    ch_short_description = models.TextField(max_length=500)
-    ch_banner_image = models.ImageField(upload_to='banner/')
+    ch_title = models.CharField(max_length=255,blank=True, null=True)
+    ch_short_description = models.TextField(max_length=500,blank=True, null=True)
+    ch_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
 
     objects = UniqueHeroSectionManager()
     def save(self, *args, **kwargs):
@@ -91,9 +91,9 @@ class AboutSection(models.Model):
     en_short_description = models.TextField(max_length=1000)
     en_banner_image = models.ImageField(upload_to='banner/')
 
-    ch_title = models.CharField(max_length=255)
-    ch_short_description = models.TextField(max_length=1000)
-    ch_banner_image = models.ImageField(upload_to='banner/')
+    ch_title = models.CharField(max_length=255,blank=True, null=True)
+    ch_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    ch_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
 
     objects = UniqueAboutSectionManager()
     def save(self, *args, **kwargs):
@@ -112,8 +112,8 @@ class ServiceSummarySection(models.Model):
     en_service_summary_title = models.CharField(max_length=255)
     en_short_description = models.TextField(max_length=1000)
 
-    ch_service_summary_title = models.CharField(max_length=255)
-    ch_short_description = models.TextField(max_length=1000)
+    ch_service_summary_title = models.CharField(max_length=255,blank=True, null=True)
+    ch_short_description = models.TextField(max_length=1000,blank=True, null=True)
 
     class Meta:
         verbose_name = '04. Service Summary Section'
@@ -124,11 +124,11 @@ class ServiceSummarySection(models.Model):
 
 # COUNTER SECTION 
 class CounterSection(models.Model):
-    en_value = models.CharField(max_length=255)
-    en_title = models.CharField(max_length=500)
+    en_value = models.CharField(max_length=255,blank=True, null=True)
+    en_title = models.CharField(max_length=500,blank=True, null=True)
 
-    ch_value = models.CharField(max_length=255)
-    ch_title = models.CharField(max_length=500)
+    ch_value = models.CharField(max_length=255,blank=True, null=True)
+    ch_title = models.CharField(max_length=500,blank=True, null=True)
 
     class Meta:
         verbose_name = '05. Counter Section'
@@ -139,11 +139,11 @@ class CounterSection(models.Model):
 
 # OUR APPROACH 
 class ApproachSection(models.Model):
-    en_title = models.CharField(max_length=255)
-    en_description = models.TextField(max_length=1000)
+    en_title = models.CharField(max_length=255,)
+    en_description = models.TextField(max_length=1000,)
 
-    ch_title = models.CharField(max_length=255)
-    ch_description = models.TextField(max_length=1000)
+    ch_title = models.CharField(max_length=255,)
+    ch_description = models.TextField(max_length=1000,)
 
 
     class Meta:
@@ -160,13 +160,13 @@ class UniqueCommitmentSectionManager(models.Manager):
         return commitmentsection
 
 class CommitmentSection(models.Model):
-    en_title = models.CharField(max_length=255)
-    en_short_description = models.TextField(max_length=1000)
-    en_banner_image = models.ImageField(upload_to='banner/')
+    en_title = models.CharField(max_length=255,blank=True, null=True)
+    en_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    en_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
 
-    ch_title = models.CharField(max_length=255)
-    ch_short_description = models.TextField(max_length=1000)
-    ch_banner_image = models.ImageField(upload_to='banner/')
+    ch_title = models.CharField(max_length=255,blank=True, null=True)
+    ch_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    ch_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
 
     objects = UniqueCommitmentSectionManager()
     def save(self, *args, **kwargs):
@@ -217,13 +217,13 @@ class UniqueContactManager(models.Manager):
         return contact_data
 
 class Contact(models.Model):
-    en_address = models.TextField(max_length=1000)
-    en_email = models.CharField(max_length=50)
-    en_phone = models.CharField(max_length=50)
+    en_address = models.TextField(max_length=1000,blank=True, null=True)
+    en_email = models.CharField(max_length=50,blank=True, null=True)
+    en_phone = models.CharField(max_length=50,blank=True, null=True)
 
-    ch_address = models.TextField(max_length=1000)
-    ch_email = models.CharField(max_length=50)
-    ch_phone = models.CharField(max_length=50)
+    ch_address = models.TextField(max_length=1000,blank=True, null=True)
+    ch_email = models.CharField(max_length=50,blank=True, null=True)
+    ch_phone = models.CharField(max_length=50,blank=True, null=True)
 
     objects = UniqueContactManager()
     def save(self, *args, **kwargs):
@@ -272,10 +272,10 @@ class WebsiteSettings(models.Model):
     favicon_icon = models.ImageField(upload_to='favicon_icons/',blank=True,null=True)
     website_logo = models.ImageField(upload_to='logo/',blank=True,null=True)
     service_section_background_image = models.ImageField(upload_to='service_background_image/',blank=True,null=True)
-    en_website_title = models.CharField(max_length=255)
+    en_website_title = models.CharField(max_length=255,blank=True, null=True)
     en_website_nav_title=models.CharField(max_length=255,blank=True,null=True)
 
-    ch_website_title = models.CharField(max_length=255)
+    ch_website_title = models.CharField(max_length=255,blank=True, null=True)
     ch_website_nav_title=models.CharField(max_length=255,blank=True,null=True)
 
     objects = UniqueWebsiteSettingsManager()
@@ -297,11 +297,11 @@ class UniquePricingSectionManager(models.Manager):
         return pricingsection
 
 class PricingSection(models.Model):
-    en_currency_title = models.CharField(max_length=255)
-    en_short_description = models.TextField(max_length=1000)
+    en_currency_title = models.CharField(max_length=255,blank=True, null=True)
+    en_short_description = models.TextField(max_length=1000,blank=True, null=True)
 
-    ch_currency_title = models.CharField(max_length=255)
-    ch_short_description = models.TextField(max_length=1000)
+    ch_currency_title = models.CharField(max_length=255,blank=True, null=True)
+    ch_short_description = models.TextField(max_length=1000,blank=True, null=True)
 
     objects = UniquePricingSectionManager()
     def save(self, *args, **kwargs):
