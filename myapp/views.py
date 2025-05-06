@@ -10,10 +10,10 @@ def home(request):
     hero_data = HeroSection.objects.get_or_create_singleton()
     about_data = AboutSection.objects.get_or_create_singleton()
 
-    service_summary_data = ServiceSummarySection.objects.all()
-    counter_data = CounterSection.objects.all()
+    service_summary_data = ServiceSummarySection.objects.all()[:2]
+    counter_data = CounterSection.objects.all()[:4]
     approach_data = ApproachSection.objects.all()
-    commitment_data = CommitmentSection.objects.all()
+    commitment_data = CommitmentSection.objects.get_or_create_singleton()
     allservice_data = AllServicesSection.objects.all()
     whychoose_data = WhyChooseUsSection.objects.all()
 
@@ -22,6 +22,7 @@ def home(request):
     websitesetting_data = WebsiteSettings.objects.get_or_create_singleton()
     pricing_data = PricingSection.objects.get_or_create_singleton()
     context ={
+        'websitetitles_data':websitetitles_data,
         'hero_data':hero_data,
         'about_data':about_data,
         'service_summary_data':service_summary_data,

@@ -66,7 +66,7 @@ class HeroSection(models.Model):
 
     ch_title = models.CharField(max_length=255,blank=True, null=True)
     ch_short_description = models.TextField(max_length=500,blank=True, null=True)
-    ch_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
+    # ch_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
 
     objects = UniqueHeroSectionManager()
     def save(self, *args, **kwargs):
@@ -87,13 +87,13 @@ class UniqueAboutSectionManager(models.Manager):
         return aboutsection
 
 class AboutSection(models.Model):
-    en_title = models.CharField(max_length=255)
-    en_short_description = models.TextField(max_length=1000)
+    # en_title = models.CharField(max_length=255)
+    # en_short_description = models.TextField(max_length=1000)
     en_banner_image = models.ImageField(upload_to='banner/')
 
-    ch_title = models.CharField(max_length=255,blank=True, null=True)
-    ch_short_description = models.TextField(max_length=1000,blank=True, null=True)
-    ch_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
+    # ch_title = models.CharField(max_length=255,blank=True, null=True)
+    # ch_short_description = models.TextField(max_length=1000,blank=True, null=True)
+    # ch_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
 
     objects = UniqueAboutSectionManager()
     def save(self, *args, **kwargs):
@@ -120,7 +120,7 @@ class ServiceSummarySection(models.Model):
         verbose_name_plural = '04. Service Summary Section'
         
     def __str__(self):
-        return self.service_summary_title
+        return self.en_service_summary_title
 
 # COUNTER SECTION 
 class CounterSection(models.Model):
@@ -135,7 +135,7 @@ class CounterSection(models.Model):
         verbose_name_plural = '05. Counter Section'
         
     def __str__(self):
-        return self.title
+        return self.en_title
 
 # OUR APPROACH 
 class ApproachSection(models.Model):
@@ -151,7 +151,7 @@ class ApproachSection(models.Model):
         verbose_name_plural = '06. Our Approach Section'
         
     def __str__(self):
-        return self.title
+        return self.en_title
 
 # OUR COMMITMENT       
 class UniqueCommitmentSectionManager(models.Manager):
@@ -166,7 +166,7 @@ class CommitmentSection(models.Model):
 
     ch_title = models.CharField(max_length=255,blank=True, null=True)
     ch_short_description = models.TextField(max_length=1000,blank=True, null=True)
-    ch_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
+    # ch_banner_image = models.ImageField(upload_to='banner/',blank=True, null=True)
 
     objects = UniqueCommitmentSectionManager()
     def save(self, *args, **kwargs):
@@ -193,7 +193,7 @@ class AllServicesSection(models.Model):
         verbose_name_plural = '08. All Services Section'
         
     def __str__(self):
-        return self.title
+        return self.en_title
 
 # WHY CHOOSE US SECTION       
 class WhyChooseUsSection(models.Model):
@@ -208,7 +208,7 @@ class WhyChooseUsSection(models.Model):
         verbose_name_plural = '09. Why Choose Us'
         
     def __str__(self):
-        return self.title
+        return self.en_title
 
 # ADDRESS  
 class UniqueContactManager(models.Manager):
